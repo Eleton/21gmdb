@@ -25,7 +25,7 @@ Here is a simple draft of the application, created in Figma:
 ## Todo
 
 - [x] Initialise project
-- [ ] Create basic layout
+- [x] Create basic layout
 - [ ] Create API that reads and return JSON
 - [ ] Display movies in list
 - [ ] Add support for filtering in API and request in client
