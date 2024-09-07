@@ -1,16 +1,11 @@
-import json from "@/app/data/movies.json";
-import { Movie } from "@/types";
+import { NextRequest } from "next/server";
+import getMovies from "@/app/data/getMovies";
 
-export async function GET() {
-  const data: Movie[] = json.Movies.map(
-    ({ Title, Genre, Director, Actors, Plot, Poster }) => ({
-      title: Title,
-      genre: Genre.split(", "),
-      director: Director,
-      actors: Actors.split(", "),
-      plot: Plot,
-      poster: Poster,
-    }),
-  );
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  const genre = searchParams.get("genre");
+  const language = searchParams.get("language");
+
+  const data = getMovies({ genre, language });
   return Response.json(data);
 }

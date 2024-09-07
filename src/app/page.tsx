@@ -1,7 +1,15 @@
 import SearchList from "@/components/SearchList";
 import Sidebar from "@/components/Sidebar";
+import getMovies from "./data/getMovies";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { genre?: string; language?: string };
+}) {
+  const { genre, language } = searchParams;
+
+  const movies = getMovies({ genre, language });
   return (
     <div className="flex min-h-screen flex-col font-[family-name:var(--font-geist-sans)]">
       <header className="bg-orange">
@@ -12,7 +20,7 @@ export default function Home() {
       <div className="flex grow flex-col items-stretch sm:flex-row">
         <Sidebar />
         <main>
-          <SearchList />
+          <SearchList movies={movies} />
         </main>
       </div>
     </div>
