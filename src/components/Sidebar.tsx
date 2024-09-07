@@ -27,7 +27,7 @@ const Sidebar = () => {
         </label>
         <select
           id="genre-select"
-          className="min-w-40 rounded-md p-1"
+          className="min-w-40 rounded-md p-1 outline-orange"
           value={params.genre || ""}
           onChange={(e) => {
             const genre = e.target.value;
@@ -48,7 +48,7 @@ const Sidebar = () => {
         </label>
         <select
           id="language-select"
-          className="min-w-40 rounded-md p-1"
+          className="min-w-40 rounded-md p-1 outline-orange"
           value={params.language || ""}
           onChange={(e) => {
             const language = e.target.value;
