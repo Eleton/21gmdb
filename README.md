@@ -28,5 +28,5 @@ Here is a simple draft of the application, created in Figma:
 - [x] Create basic layout
 - [x] Create API that reads and return JSON
 - [x] Display movies in list
-- [ ] Add support for filtering in API and request in client
+- [x] Add support for filtering by genre and language
 - [ ] Implement search filter
