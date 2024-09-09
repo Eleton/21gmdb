@@ -30,3 +30,5 @@ Here is a simple draft of the application, created in Figma:
 - [x] Display movies in list
 - [x] Add support for filtering by genre and language
 - [x] Implement search filter
+- [x] Add tests with Vitest
+- [x] Rewrite marker to only mark search string
